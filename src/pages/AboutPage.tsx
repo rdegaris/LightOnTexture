@@ -34,7 +34,7 @@ const AboutPage: React.FC = () => {
                     {/* Left side - Image */}
                     <div>
                         <img
-                            src="/src/assets/about.jpg"
+                            src="/about.jpg"
                             alt="About Ryan de Garis"
                             className="w-full h-auto object-cover rounded-sm shadow-lg"
                         />

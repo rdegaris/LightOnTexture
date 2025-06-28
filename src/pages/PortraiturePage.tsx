@@ -3,10 +3,10 @@ import React from 'react';
 const PortraiturePage: React.FC = () => {
     // Array of image rows for the 4x4 grid (16 images total)
     const imageRows = [
-        ['/src/assets/port1.jpg', '/src/assets/port2.jpg', '/src/assets/port3.jpg', '/src/assets/port4.jpg'],
-        ['/src/assets/port5.jpg', '/src/assets/port6.jpg', '/src/assets/port7.jpg', '/src/assets/port8.jpg'],
-        ['/src/assets/port9.jpg', '/src/assets/port10.jpg', '/src/assets/port11.jpg', '/src/assets/port12.jpg'],
-        ['/src/assets/port13.jpg', '/src/assets/port14.jpg', '/src/assets/port15.jpg', '/src/assets/port16.jpg'],
+        ['/port1.jpg', '/port2.jpg', '/port3.jpg', '/port4.jpg'],
+        ['/port5.jpg', '/port6.jpg', '/port7.jpg', '/port8.jpg'],
+        ['/port9.jpg', '/port10.jpg', '/port11.jpg', '/port12.jpg'],
+        ['/port13.jpg', '/port14.jpg', '/port15.jpg', '/port16.jpg'],
     ];
 
     return (

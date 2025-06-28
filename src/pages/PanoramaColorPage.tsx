@@ -3,11 +3,11 @@ import React from 'react';
 const PanoramaColorPage: React.FC = () => {
     // Array of image pairs for the 5 rows
     const imageRows = [
-        ['/src/assets/gall1.jpg', '/src/assets/gall2.jpg'],
-        ['/src/assets/gall3.jpg', '/src/assets/gall4.jpg'],
-        ['/src/assets/gall5.jpg', '/src/assets/gall6.jpg'],
-        ['/src/assets/gall7.jpg', '/src/assets/gall8.jpg'],
-        ['/src/assets/gall9.jpg', '/src/assets/gall10.jpg'],
+        ['/gall1.jpg', '/gall2.jpg'],
+        ['/gall3.jpg', '/gall4.jpg'],
+        ['/gall5.jpg', '/gall6.jpg'],
+        ['/gall7.jpg', '/gall8.jpg'],
+        ['/gall9.jpg', '/gall10.jpg'],
     ];
 
     return (

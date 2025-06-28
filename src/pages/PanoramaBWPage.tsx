@@ -3,20 +3,20 @@ import React from 'react';
 const PanoramaBWPage: React.FC = () => {
     // Array of panoramic black and white images for 2x7 grid
     const images = [
-        '/src/assets/pan1.jpg',
-        '/src/assets/pan2.jpg',
-        '/src/assets/pan3.jpg',
-        '/src/assets/pan4.jpg',
-        '/src/assets/pan5.jpg',
-        '/src/assets/pan6.jpg',
-        '/src/assets/pan7.jpg',
-        '/src/assets/pan8.jpg',
-        '/src/assets/pan9.jpg',
-        '/src/assets/pan10.jpg',
-        '/src/assets/pan11.jpg',
-        '/src/assets/pan12.jpg',
-        '/src/assets/pan13.jpg',
-        '/src/assets/pan14.jpg'
+        '/pan1.jpg',
+        '/pan2.jpg',
+        '/pan3.jpg',
+        '/pan4.jpg',
+        '/pan5.jpg',
+        '/pan6.jpg',
+        '/pan7.jpg',
+        '/pan8.jpg',
+        '/pan9.jpg',
+        '/pan10.jpg',
+        '/pan11.jpg',
+        '/pan12.jpg',
+        '/pan13.jpg',
+        '/pan14.jpg'
     ];
 
     return (
@@ -49,7 +49,7 @@ const PanoramaBWPage: React.FC = () => {
                 <div className="flex justify-center">
                     <div>
                         <img
-                            src="/src/assets/pan15.jpg"
+                            src="/pan15.jpg"
                             alt="B&W Panorama 15"
                             className="object-cover rounded-sm shadow-sm hover:shadow-md transition-shadow duration-200 filter grayscale"
                         />

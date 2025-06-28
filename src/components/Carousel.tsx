@@ -5,13 +5,13 @@ const Carousel: React.FC = () => {
     
     // Placeholder images - you can replace these with actual image paths
     const images = [
-        '/src/assets/home1.jpg',
-        '/src/assets/home2.jpg',
-        '/src/assets/home3.jpg',
-        '/src/assets/home4.jpg',
-        '/src/assets/home5.jpg',
-        '/src/assets/home6.jpg',
-        '/src/assets/home7.jpg'
+        '/home1.jpg',
+        '/home2.jpg',
+        '/home3.jpg',
+        '/home4.jpg',
+        '/home5.jpg',
+        '/home6.jpg',
+        '/home7.jpg'
     ];
 
     // Auto-advance carousel every 5 seconds

@@ -3,10 +3,10 @@ import React from 'react';
 const StillLifePage: React.FC = () => {
     // Array of image rows for the 4x4 grid (16 images total)
     const imageRows = [
-        ['/src/assets/still1.jpg', '/src/assets/still2.jpg', '/src/assets/still3.jpg', '/src/assets/still4.jpg'],
-        ['/src/assets/still5.jpg', '/src/assets/still6.jpg', '/src/assets/still7.jpg', '/src/assets/still8.jpg'],
-        ['/src/assets/still9.jpg', '/src/assets/still10.jpg', '/src/assets/still11.jpg', '/src/assets/still12.jpg'],
-        ['/src/assets/still13.jpg', '/src/assets/still14.jpg', '/src/assets/still15.jpg', '/src/assets/still16.jpg'],
+        ['/still1.jpg', '/still2.jpg', '/still3.jpg', '/still4.jpg'],
+        ['/still5.jpg', '/still6.jpg', '/still7.jpg', '/still8.jpg'],
+        ['/still9.jpg', '/still10.jpg', '/still11.jpg', '/still12.jpg'],
+        ['/still13.jpg', '/still14.jpg', '/still15.jpg', '/still16.jpg'],
     ];
 
     return (

@@ -22,7 +22,7 @@ const ArtPrintsPage: React.FC = () => {
                     {/* Left side - Image */}
                     <div>
                         <img
-                            src="/src/assets/home6.jpg"
+                            src="/home6.jpg"
                             alt="Carlsbad Train Station"
                             className="w-full object-cover rounded-sm"
                         />
