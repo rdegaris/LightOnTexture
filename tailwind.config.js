@@ -5,6 +5,7 @@ export default {
       fontFamily: {
         'sans': ['Inter', 'system-ui', 'sans-serif'],
         'logo': ['Poppins', 'Inter', 'system-ui', 'sans-serif'],
+        'eurostile': ['Eurostile', 'Poppins', 'Inter', 'system-ui', 'sans-serif'],
       },
       fontWeight: {
         'light': 300,

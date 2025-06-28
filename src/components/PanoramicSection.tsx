@@ -3,11 +3,11 @@ import React from 'react';
 const PanoramicSection: React.FC = () => {
     return (
         <section className="bg-white py-16 px-4 md:px-8">
-            <div className="max-w-7xl mx-auto">
+            <div className="w-[90%] mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
                     {/* Left side - Title */}
                     <div>
-                        <h2 className="text-4xl md:text-5xl font-light text-gray-900 tracking-wide">
+                        <h2 className="text-4xl md:text-5xl font-eurostile text-gray-900 tracking-wide">
                             Panoramic
                         </h2>
                     </div>

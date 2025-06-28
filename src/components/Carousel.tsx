@@ -36,7 +36,7 @@ const Carousel: React.FC = () => {
     };
 
     return (
-        <div className="relative w-full max-w-7xl mx-auto px-4 md:px-8 py-8">
+        <div className="relative w-[90%] mx-auto px-4 md:px-8 py-8">
             {/* Main carousel container */}
             <div className="relative overflow-hidden rounded-lg bg-gray-100">
                 <div 
@@ -48,7 +48,7 @@ const Carousel: React.FC = () => {
                             <img
                                 src={image}
                                 alt={`Gallery image ${index + 1}`}
-                                className="w-full h-96 md:h-[600px] object-cover"
+                                className="w-full object-cover"
                             />
                         </div>
                     ))}

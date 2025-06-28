@@ -11,13 +11,16 @@ const PortraiturePage: React.FC = () => {
 
     return (
         <div className="bg-white min-h-screen">
-            {/* Page Title */}
+            {/* Quote Section */}
             <div className="text-center py-16 px-4">
-                <h1 className="text-3xl md:text-4xl font-light text-gray-900 mb-8">Portraiture</h1>
+                <blockquote className="text-xl md:text-2xl font-eurostile text-gray-900 max-w-4xl mx-auto mb-4">
+                    "Too much Black and White. You know color has been around for a while right?"
+                </blockquote>
+                <cite className="text-gray-600 text-sm font-light">— Anon</cite>
             </div>
 
             {/* Gallery Grid - 4x4 */}
-            <div className="max-w-7xl mx-auto px-4 md:px-8 pb-16">
+            <div className="w-[90%] mx-auto px-4 md:px-8 pb-16">
                 <div className="space-y-6">
                     {imageRows.map((row, rowIndex) => (
                         <div key={rowIndex} className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
@@ -26,7 +29,7 @@ const PortraiturePage: React.FC = () => {
                                     <img
                                         src={image}
                                         alt={`Portrait ${rowIndex * 4 + imageIndex + 1}`}
-                                        className="w-full h-48 md:h-64 object-cover rounded-sm shadow-sm hover:shadow-md transition-shadow duration-200"
+                                        className="w-full object-cover rounded-sm shadow-sm hover:shadow-md transition-shadow duration-200"
                                     />
                                 </div>
                             ))}
