@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LightOnTexture Business Card</title>
+    <style>
+        @font-face {
+            font-family: 'Eurostile';
+            src: url('./src/assets/Eurostile Extended Regular.ttf') format('truetype');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .business-card {
+            width: 3.5in;
+            height: 2in;
+            background: white;
+            border: 1px solid #ddd;
+            display: flex;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        /* Front of card */
+        .card-front {
+            display: flex;
+            background: #2d3748;
+            color: white;
+        }
+
+        .main-section {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0.3in;
+            text-align: center;
+        }
+
+        .contact-section {
+            flex: 1;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0.2in;
+            writing-mode: vertical-lr;
+            text-orientation: mixed;
+        }
+
+        .logo {
+            font-family: 'Eurostile', Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .tagline {
+            font-size: 10px;
+            color: #ccc;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .contact-info {
+            font-size: 10px;
+            color: #2d3748;
+            line-height: 1.8;
+            text-align: center;
+            writing-mode: vertical-lr;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-info a {
+            color: #2d3748;
+            text-decoration: underline;
+            display: block;
+            writing-mode: vertical-lr;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Back of card */
+        .card-back {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0.3in;
+            text-align: center;
+            background: #2d3748;
+            color: white;
+            position: relative;
+        }
+
+        .back-logo {
+            font-family: 'Eurostile', Arial, sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+
+        .services {
+            font-size: 8px;
+            line-height: 1.6;
+            text-align: center;
+            opacity: 0.9;
+        }
+
+        .services-title {
+            font-size: 10px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .card-container {
+                gap: 0.25in;
+            }
+            
+            .business-card {
+                border: 1px solid #000;
+                break-inside: avoid;
+            }
+        }
+
+        /* Instructions */
+        .instructions {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 12px;
+            max-width: 300px;
+        }
+
+        @media print {
+            .instructions {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="instructions">
+        <strong>Printing Instructions:</strong><br>
+        • Print on 350gsm cardstock<br>
+        • Use high-quality/photo settings<br>
+        • Cut along the borders<br>
+        • Standard business card size: 3.5" × 2"
+    </div>
+
+    <div class="card-container">
+        <!-- Business Card -->
+        <div class="business-card">
+            <div class="card-front">
+                <div class="main-section">
+                    <div class="logo">LightOnTexture</div>
+                    <div class="tagline">Film Photography</div>
+                </div>
+                <div class="contact-section">
+                    <div class="contact-info">
+                        <a>@lightontexture</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
