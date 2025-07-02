@@ -9,7 +9,7 @@ const Header: React.FC = () => {
     return (
         <header className="bg-white border-b border-gray-100 px-4 md:px-8 py-4 md:py-6">
             <div className="flex flex-col md:flex-row justify-between items-center w-[90%] mx-auto gap-4 md:gap-0">
-                <Link to="/" className="text-2xl md:text-3xl lg:text-4xl font-eurostile font-bold tracking-tight text-gray-900 hover:text-gray-700 transition-colors">
+                <Link to="/" className="text-2xl md:text-3xl lg:text-4xl font-eurostile font-bold tracking-tight text-gray-900 hover:text-gray-700 transition-colors focus:outline-none">
                     LightOnTexture
                 </Link>
                 <nav className="w-full md:w-auto">
@@ -17,8 +17,8 @@ const Header: React.FC = () => {
                         <li>
                             <Link 
                                 to="/panorama-bw" 
-                                className={`text-gray-700 hover:text-gray-900 transition-colors whitespace-nowrap ${
-                                    isActive('/panorama-bw') ? 'underline' : ''
+                                className={`nav-link text-gray-700 hover:text-gray-900 transition-colors whitespace-nowrap focus:outline-none ${
+                                    isActive('/panorama-bw') ? 'active' : ''
                                 }`}
                             >
                                 Panorama (B&W)
@@ -27,8 +27,8 @@ const Header: React.FC = () => {
                         <li>
                             <Link 
                                 to="/panorama-color" 
-                                className={`text-gray-700 hover:text-gray-900 transition-colors whitespace-nowrap ${
-                                    isActive('/panorama-color') ? 'underline' : ''
+                                className={`nav-link text-gray-700 hover:text-gray-900 transition-colors whitespace-nowrap focus:outline-none ${
+                                    isActive('/panorama-color') ? 'active' : ''
                                 }`}
                             >
                                 Panorama (Color)
@@ -37,8 +37,8 @@ const Header: React.FC = () => {
                         <li>
                             <Link 
                                 to="/portraiture" 
-                                className={`text-gray-700 hover:text-gray-900 transition-colors ${
-                                    isActive('/portraiture') ? 'underline' : ''
+                                className={`nav-link text-gray-700 hover:text-gray-900 transition-colors focus:outline-none ${
+                                    isActive('/portraiture') ? 'active' : ''
                                 }`}
                             >
                                 Portraiture
@@ -47,8 +47,8 @@ const Header: React.FC = () => {
                         <li>
                             <Link 
                                 to="/still-life" 
-                                className={`text-gray-700 hover:text-gray-900 transition-colors whitespace-nowrap ${
-                                    isActive('/still-life') ? 'underline' : ''
+                                className={`nav-link text-gray-700 hover:text-gray-900 transition-colors whitespace-nowrap focus:outline-none ${
+                                    isActive('/still-life') ? 'active' : ''
                                 }`}
                             >
                                 Still Life
@@ -57,8 +57,8 @@ const Header: React.FC = () => {
                         <li>
                             <Link 
                                 to="/about" 
-                                className={`text-gray-700 hover:text-gray-900 transition-colors ${
-                                    isActive('/about') ? 'underline' : ''
+                                className={`nav-link text-gray-700 hover:text-gray-900 transition-colors focus:outline-none ${
+                                    isActive('/about') ? 'active' : ''
                                 }`}
                             >
                                 About
@@ -69,7 +69,7 @@ const Header: React.FC = () => {
                                 href="https://lightontexture.darkroom.com/" 
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className={`text-gray-700 hover:text-gray-900 transition-colors whitespace-nowrap`}
+                                className={`nav-link text-gray-700 hover:text-gray-900 transition-colors whitespace-nowrap focus:outline-none`}
                             >
                                 Buy Prints
                             </a>
@@ -77,8 +77,8 @@ const Header: React.FC = () => {
                         <li>
                             <Link 
                                 to="/art-prints" 
-                                className={`text-gray-700 hover:text-gray-900 transition-colors whitespace-nowrap ${
-                                    isActive('/art-prints') ? 'underline' : ''
+                                className={`nav-link text-gray-700 hover:text-gray-900 transition-colors whitespace-nowrap focus:outline-none ${
+                                    isActive('/art-prints') ? 'active' : ''
                                 }`}
                             >
                                 Art Prints

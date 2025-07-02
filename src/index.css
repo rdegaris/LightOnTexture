@@ -14,10 +14,65 @@
 @layer base {
   html {
     font-family: 'Inter', system-ui, sans-serif;
+    scroll-behavior: smooth;
   }
   
   body {
     @apply antialiased;
+  }
+
+  /* Custom focus styles to match site aesthetic */
+  *:focus {
+    outline: none;
+  }
+
+  /* Focus styles for navigation links */
+  a:focus {
+    outline: 2px solid #6B7280;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* Focus styles for buttons */
+  button:focus {
+    outline: 2px solid #6B7280;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* Focus styles for form inputs */
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: 2px solid #6B7280;
+    outline-offset: 0px;
+    border-color: #6B7280;
+  }
+
+  /* Focus styles for images and clickable gallery items */
+  img:focus,
+  [role="button"]:focus {
+    outline: 2px solid #6B7280;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
   }
 }
 
@@ -36,5 +91,253 @@
     font-family: 'Eurostile', 'Poppins', 'Inter', system-ui, sans-serif;
     font-weight: normal;
     letter-spacing: 0.05em;
+  }
+
+  /* Fade in animation for page content */
+  .fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Hover effects for gallery images */
+  .gallery-image {
+    transition: all 0.3s ease;
+    transform-origin: center center;
+  }
+
+  .gallery-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .gallery-image:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(107, 114, 128, 0.3);
+  }
+
+  /* Loading skeleton animation */
+  .skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+  }
+
+  @keyframes loading {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+
+  /* Smooth transitions for navigation */
+  .nav-link {
+    position: relative;
+    transition: color 0.2s ease;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: 100%;
+  }
+
+  /* Navigation specific focus styles */
+  .nav-link:focus {
+    outline: none;
+    box-shadow: 0 2px 0 0 #6B7280;
+    border-radius: 0;
+  }
+
+  .nav-link.active {
+    text-decoration: underline;
+    text-decoration-color: #374151;
+    text-underline-offset: 4px;
+  }
+
+  /* Logo focus style */
+  header a[href="/"]:focus {
+    outline: none;
+    text-shadow: 0 0 0 2px rgba(107, 114, 128, 0.3);
+    border-radius: 4px;
+  }
+
+  /* Gallery image focus styles */
+  .gallery-image:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(107, 114, 128, 0.3);
+    transform: scale(1.02);
+    transition: all 0.2s ease;
+  }
+
+  /* Carousel image focus */
+  .carousel img:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(107, 114, 128, 0.3);
+    border-radius: 4px;
+  }
+
+  /* Page transition animations */
+  .page-transition {
+    will-change: opacity, transform;
+  }
+
+  .page-visible {
+    animation: fadeInUp 300ms ease-out;
+  }
+
+  .page-hidden {
+    animation: fadeOutDown 300ms ease-in;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeOutDown {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Smooth hover transitions for images */
+  .image-hover-effect {
+    transition: transform 300ms ease-out, box-shadow 300ms ease-out;
+  }
+
+  .image-hover-effect:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Lightbox animations */
+  .lightbox-overlay {
+    animation: fadeIn 250ms ease-out;
+  }
+
+  .lightbox-image {
+    animation: scaleIn 300ms ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  /* Lightbox specific styles */
+  .lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.95);
+  }
+
+  .lightbox-image {
+    max-width: 90%;
+    max-height: 80vh;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+    animation: lightboxImageFade 0.3s ease-in-out;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  }
+
+  @keyframes lightboxImageFade {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Gallery image hover effect */
+  .image-hover-effect {
+    transition: all 0.2s ease;
+  }
+  
+  .image-hover-effect:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Focus effect for clickable images */
+  .image-hover-effect:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #6B7280;
+    transform: scale(1.01);
+  }
+  
+  /* Lightbox image focus - no outline */
+  .lightbox-image:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Lightbox image centering fix for Firefox */
+  @-moz-document url-prefix() {
+    .lightbox-image {
+      margin: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 }

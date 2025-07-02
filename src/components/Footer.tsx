@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
         <footer className="bg-gray-200 py-8 px-4 md:px-8">
             <div className="w-[90%] mx-auto flex flex-col md:flex-row justify-between items-center">
                 <div className="text-gray-700 text-sm mb-4 md:mb-0">
-                    Ryan de Garis
+                    LightOnTexture
                 </div>
                 
                 <div className="flex space-x-4 mb-4 md:mb-0">
@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
                 </div>
                 
                 <div className="text-gray-700 text-sm">
-                    © Ryan de Garis {new Date().getFullYear()}
+                    © LightOnTexture {new Date().getFullYear()}
                 </div>
             </div>
         </footer>

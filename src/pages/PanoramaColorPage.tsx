@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ImageLightbox from '../components/ImageLightbox';
+import { ImageWithLoading } from '../components/LoadingSpinner';
 
 const PanoramaColorPage: React.FC = () => {
+    const [lightboxOpen, setLightboxOpen] = useState(false);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
     // Array of image pairs for the 5 rows
     const imageRows = [
         ['/gall1.jpg', '/gall2.jpg'],
@@ -9,6 +14,40 @@ const PanoramaColorPage: React.FC = () => {
         ['/gall7.jpg', '/gall8.jpg'],
         ['/gall9.jpg', '/gall10.jpg'],
     ];
+
+    // Flatten the image array for lightbox navigation
+    const allImages = imageRows.flat();
+
+    // Image descriptions for better SEO and accessibility
+    const imageDescriptions = [
+        'Color panoramic landscape photograph - Hasselblad Xpan on Kodak Portra film',
+        'Color panoramic landscape photograph - Hasselblad Xpan on Kodak Portra film',
+        'Color panoramic landscape photograph - Hasselblad Xpan on Kodak Portra film',
+        'Color panoramic landscape photograph - Hasselblad Xpan on Kodak Portra film',
+        'Color panoramic landscape photograph - Hasselblad Xpan on Kodak Portra film',
+        'Color panoramic landscape photograph - Hasselblad Xpan on Kodak Portra film',
+        'Color panoramic landscape photograph - Hasselblad Xpan on Kodak Portra film',
+        'Color panoramic landscape photograph - Hasselblad Xpan on Kodak Portra film',
+        'Color panoramic landscape photograph - Hasselblad Xpan on Kodak Portra film',
+        'Color panoramic landscape photograph - Hasselblad Xpan on Kodak Portra film',
+    ];
+
+    const openLightbox = (imageIndex: number) => {
+        setCurrentImageIndex(imageIndex);
+        setLightboxOpen(true);
+    };
+
+    const closeLightbox = () => {
+        setLightboxOpen(false);
+    };
+
+    const nextImage = () => {
+        setCurrentImageIndex((prev) => (prev + 1) % allImages.length);
+    };
+
+    const previousImage = () => {
+        setCurrentImageIndex((prev) => (prev - 1 + allImages.length) % allImages.length);
+    };
 
     return (
         <div className="bg-white min-h-screen">
@@ -22,22 +61,37 @@ const PanoramaColorPage: React.FC = () => {
 
             {/* Gallery Grid */}
             <div className="w-[90%] mx-auto px-4 md:px-8 pb-16">
-                <div className="space-y-8">
+                <div className="space-y-6">
                     {imageRows.map((row, rowIndex) => (
-                        <div key={rowIndex} className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
-                            {row.map((image, imageIndex) => (
-                                <div key={imageIndex}>
-                                    <img
-                                        src={image}
-                                        alt={`Gallery image ${rowIndex * 2 + imageIndex + 1}`}
-                                        className="w-full object-cover rounded-sm shadow-sm hover:shadow-md transition-shadow duration-200"
-                                    />
-                                </div>
-                            ))}
+                        <div key={rowIndex} className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {row.map((image, imageIndex) => {
+                                const globalIndex = rowIndex * 2 + imageIndex;
+                                return (
+                                    <div key={imageIndex} className="aspect-[3/1]">
+                                        <ImageWithLoading
+                                            src={image}
+                                            alt={imageDescriptions[globalIndex]}
+                                            className="w-full h-full"
+                                            onClick={() => openLightbox(globalIndex)}
+                                        />
+                                    </div>
+                                );
+                            })}
                         </div>
                     ))}
                 </div>
             </div>
+
+            {/* Image Lightbox */}
+            <ImageLightbox
+                images={allImages}
+                currentIndex={currentImageIndex}
+                isOpen={lightboxOpen}
+                onClose={closeLightbox}
+                onNext={nextImage}
+                onPrevious={previousImage}
+                alt="Color panoramic photograph"
+            />
         </div>
     );
 };

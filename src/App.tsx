@@ -1,6 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import PageTransition from './components/PageTransition';
+import ScrollToTop from './components/ScrollToTop';
+import BackToTop from './components/BackToTop';
 import HomePage from './pages/HomePage';
 import PanoramaBWPage from './pages/PanoramaBWPage';
 import PanoramaColorPage from './pages/PanoramaColorPage';
@@ -13,19 +16,23 @@ import ArtPrintsPage from './pages/ArtPrintsPage';
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-white">
         <Header />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/panorama-bw" element={<PanoramaBWPage />} />
-          <Route path="/panorama-color" element={<PanoramaColorPage />} />
-          <Route path="/portraiture" element={<PortraiturePage />} />
-          <Route path="/still-life" element={<StillLifePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/buy-prints" element={<BuyPrintsPage />} />
-          <Route path="/art-prints" element={<ArtPrintsPage />} />
-        </Routes>
+        <PageTransition>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/panorama-bw" element={<PanoramaBWPage />} />
+            <Route path="/panorama-color" element={<PanoramaColorPage />} />
+            <Route path="/portraiture" element={<PortraiturePage />} />
+            <Route path="/still-life" element={<StillLifePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/buy-prints" element={<BuyPrintsPage />} />
+            <Route path="/art-prints" element={<ArtPrintsPage />} />
+          </Routes>
+        </PageTransition>
         <Footer />
+        <BackToTop />
       </div>
     </Router>
   );
