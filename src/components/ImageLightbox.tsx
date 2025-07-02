@@ -147,7 +147,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
       )}
 
       {/* Main image */}
-      <div className="flex justify-center items-start w-full h-full pt-12">
+      <div className="flex justify-center items-start w-full h-full pt-36">
         <img
           src={images[currentIndex]}
           alt={`${alt} ${currentIndex + 1}`}
