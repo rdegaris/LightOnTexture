@@ -76,7 +76,7 @@ const StillLifePage: React.FC = () => {
                                         <ImageWithLoading
                                             src={image}
                                             alt={imageDescriptions[globalIndex]}
-                                            className="w-full h-full filter grayscale"
+                                            className="w-full h-full"
                                             onClick={() => openLightbox(globalIndex)}
                                         />
                                     </div>
