@@ -12,6 +12,7 @@ import StillLifePage from './pages/StillLifePage';
 import AboutPage from './pages/AboutPage';
 import BuyPrintsPage from './pages/BuyPrintsPage';
 import ArtPrintsPage from './pages/ArtPrintsPage';
+import BlogPage from './pages/BlogPage';
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/buy-prints" element={<BuyPrintsPage />} />
             <Route path="/art-prints" element={<ArtPrintsPage />} />
+            <Route path="/blog" element={<BlogPage />} />
           </Routes>
         </PageTransition>
         <Footer />

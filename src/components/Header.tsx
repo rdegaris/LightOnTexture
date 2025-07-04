@@ -65,6 +65,16 @@ const Header: React.FC = () => {
                             </Link>
                         </li>
                         <li>
+                            <Link 
+                                to="/blog" 
+                                className={`nav-link text-gray-700 hover:text-gray-900 transition-colors focus:outline-none ${
+                                    isActive('/blog') ? 'active' : ''
+                                }`}
+                            >
+                                Blog
+                            </Link>
+                        </li>
+                        <li>
                             <a 
                                 href="https://lightontexture.darkroom.com/" 
                                 target="_blank"
