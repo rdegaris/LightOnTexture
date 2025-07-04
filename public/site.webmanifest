@@ -1,0 +1,17 @@
+{
+    "name": "LightOnTexture - Film Photography Portfolio",
+    "short_name": "LightOnTexture",
+    "description": "Professional film photography portfolio by Ryan de Garis",
+    "icons": [
+        {
+            "src": "/favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        }
+    ],
+    "theme_color": "#1f2937",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "start_url": "/",
+    "scope": "/"
+}
