@@ -90,10 +90,10 @@ const PanoramaBWPage: React.FC = () => {
                 </div>
             </div>
 
-            {/* Centered Bottom Image */}
+            {/* Centered Bottom Image - Vertical */}
             <div className="w-[90%] mx-auto px-4 md:px-8 pb-16 pt-6">
                 <div className="flex justify-center">
-                    <div className="max-w-4xl aspect-[3/1]">
+                    <div className="max-w-xl aspect-[2/3]">
                         <ImageWithLoading
                             src="/pan15.jpg"
                             alt={imageDescriptions[14]}

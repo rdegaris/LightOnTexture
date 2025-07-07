@@ -13,6 +13,7 @@ import AboutPage from './pages/AboutPage';
 import BuyPrintsPage from './pages/BuyPrintsPage';
 import ArtPrintsPage from './pages/ArtPrintsPage';
 import BlogPage from './pages/BlogPage';
+import EquipmentPage from './pages/EquipmentPage';
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
             <Route path="/portraiture" element={<PortraiturePage />} />
             <Route path="/still-life" element={<StillLifePage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/equipment" element={<EquipmentPage />} />
             <Route path="/buy-prints" element={<BuyPrintsPage />} />
             <Route path="/art-prints" element={<ArtPrintsPage />} />
             <Route path="/blog" element={<BlogPage />} />
