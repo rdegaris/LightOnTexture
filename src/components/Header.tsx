@@ -76,6 +76,16 @@ const Header: React.FC = () => {
                         </li>
                         <li>
                             <Link 
+                                to="/video" 
+                                className={`nav-link text-gray-700 hover:text-gray-900 transition-colors focus:outline-none ${
+                                    isActive('/video') ? 'active' : ''
+                                }`}
+                            >
+                                Video
+                            </Link>
+                        </li>
+                        <li>
+                            <Link 
                                 to="/blog" 
                                 className={`nav-link text-gray-700 hover:text-gray-900 transition-colors focus:outline-none ${
                                     isActive('/blog') ? 'active' : ''
